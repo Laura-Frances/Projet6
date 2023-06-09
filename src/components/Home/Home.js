@@ -14,6 +14,6 @@ function Home() {
       <Footer />
     </div>
   );
-}f
+}
 
 export default Home; 

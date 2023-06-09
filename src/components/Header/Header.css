@@ -1,11 +1,11 @@
 .header {
   padding: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  max-width: 1240px;
-  margin: 20px auto; 
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header nav ul {
@@ -20,4 +20,4 @@
 .header nav ul li a {
   text-decoration: none;
   color: #ff6060;
-}
+}/*# sourceMappingURL=Header.css.map */
