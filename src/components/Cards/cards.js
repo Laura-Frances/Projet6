@@ -1,14 +1,15 @@
 import React from 'react';
 import '../Cards/cards.scss'
+import { Link } from 'react-router-dom';
 
 function Card(props) {
-  const { title, cover } = props;
+  const { title, cover, route } = props;
 
   return (
-    <div className="card">
+    <Link to="/logements" className="card">
       <img src={cover} alt={title} />
       <h3>{title}</h3>
-    </div>
+    </Link>
   );
 }
 

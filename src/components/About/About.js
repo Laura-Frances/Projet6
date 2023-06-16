@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Banner from '../Banner/img/aboutBanner.png'
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Banner from '../About/Banner/aboutBanner.png';
 import '../Banner/Banner.scss';
-import '../About/About.scss';
-import Collapse from '../Collapse/Collapse'
+import './About.scss';
+import Collapse from '../../components/Collapse/Collapse'
 
 function About() {
   return (

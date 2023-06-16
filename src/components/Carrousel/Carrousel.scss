@@ -1,0 +1,26 @@
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slideshow img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .slideshow button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slideshow button:hover {
+    background-color: #555;
+  }
+  

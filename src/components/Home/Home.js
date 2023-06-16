@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Home/Home.scss'
+import './Home.scss'
 import Header from '../Header/Header'
 import Banner from '../Banner/Banner'
 import Gallery from '../Gallery/gallery'

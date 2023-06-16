@@ -1,13 +1,14 @@
 .card {
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 340px;
-  width: 340px;
+  height: 330px;
+  width: 330px;
   border-radius: 10px;
   background: #FF6060;
   padding: 10px;
+  margin: 50px 25px 50px 25px;
+  cursor: pointer;
 }
 
 .card img {
@@ -17,14 +18,15 @@
   height: 85%;
   border-radius: 10px;
   z-index: 0;
-  border-radius: 10px;
 }
 
 .card h3 {
   color: #FFFFFF;
   margin: 5px;
-  font-family: "Montserrat";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=cards.css.map */

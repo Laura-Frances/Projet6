@@ -1,0 +1,48 @@
+.scroll-animation {
+  animation: scroll 0.8s forwards;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+.rotate-animation {
+  animation: rotate 0.8s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotate-animation-reverse {
+  animation: rotate-reverse 0.8s forwards;
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.collapse-animation {
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}/*# sourceMappingURL=MenuItem.css.map */

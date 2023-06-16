@@ -1,11 +1,11 @@
 .header {
   padding: 20px;
-  font-family: "Montserrat";
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .header nav ul {
@@ -20,4 +20,19 @@
 .header nav ul li a {
   text-decoration: none;
   color: #ff6060;
+}
+
+.header-logo {
+  max-width: 210px;
+  max-height: 70px;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+  }
+  .header-nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=Header.css.map */

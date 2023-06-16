@@ -1,4 +1,4 @@
-.home {
+.about {
   position: relative;
   border-radius: 25px;
   max-width: 1440px;
@@ -6,4 +6,4 @@
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
-}/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=About.css.map */
