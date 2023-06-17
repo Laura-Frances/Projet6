@@ -2,11 +2,12 @@ import React from 'react';
 import '../Cards/cards.scss'
 import { Link } from 'react-router-dom';
 
+
 function Card(props) {
-  const { title, cover, route } = props;
+  const { id, title, cover } = props;
 
   return (
-    <Link to="/logements" className="card">
+    <Link key={id} to={`/apartment/${id}`} className="card">
       <img src={cover} alt={title} />
       <h3>{title}</h3>
     </Link>

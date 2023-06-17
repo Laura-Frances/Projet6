@@ -1,45 +1,56 @@
-// import React, { useState } from 'react';
-// import './Carrousel.scss';
+
+import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import apartmentsData from '../Carrousel/jsonData.json';
+import '../Carrousel/Carrousel.scss';
 
 
-// const Carrousel = ({ jsonData }) => {
-//   const [currentSlide, setCurrentSlide] = useState(0);
+function ApartmentPage() {
+  const { id } = useParams();
+  const apartment = apartmentsData.find((apartment) => apartment.id === id);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-//   const goToPreviousSlide = () => {
-//     setCurrentSlide(currentSlide === 0 ? jsonData.pictures.length - 1 : currentSlide - 1);
-//   };
+  if (!apartment) {
+    return <div>Appartement non trouvé</div>;
+  }
+  const totalImages = apartment.pictures.length;
 
-//   const goToNextSlide = () => {
-//     setCurrentSlide(currentSlide === jsonData.pictures.length - 1 ? 0 : currentSlide + 1);
-//   };
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
+  };
 
-//   return (
-//     <div className="carrousel">
-//       {jsonData.pictures.length > 1 && (
-//         <button onClick={goToPreviousSlide}>Précédent</button>
-//       )}
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? totalImages - 1 : prevIndex - 1
+    );
+  };
+  return (
+    <div>
+      <div className="carousel">
+        <div className="carousel-image-container">
+          <img
+            className="carousel-image"
+            src={apartment.pictures[currentImageIndex]}
+            alt={`Image ${currentImageIndex}`}
+          />
+          <div className="navigation">
+            <div
+              className="carousel-navigation arrow-left"
+              onClick={handlePrevImage}
+            >
+              <i className="fas fa-chevron-left"></i>
+            </div>
+            <div
+              className="carousel-navigation arrow-right"
+              onClick={handleNextImage}
+            >
+              <i className="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-//       <img src={jsonData.pictures[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-
-//       {jsonData.pictures.length > 1 && (
-//         <button onClick={goToNextSlide}>Suivant</button>
-//       )}
-
-//       {jsonData.pictures.length > 1 && (
-//         <div className="pagination">
-//           {jsonData.pictures.map((_, index) => (
-//             <button
-//               key={index}
-//               onClick={() => setCurrentSlide(index)}
-//               className={index === currentSlide ? 'active' : ''}
-//             >
-//               {index + 1}
-//             </button>
-//           ))}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Carrousel;
+export default ApartmentPage;;

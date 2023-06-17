@@ -1,26 +1,41 @@
-.slideshow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .slideshow img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  .slideshow button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .slideshow button:hover {
-    background-color: #555;
-  }
-  
+.carousel-image-container {
+  position: relative;
+  /* Ajoute cette ligne */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  border-radius: 25px;
+  display: block;
+  max-width: 100%;
+  width: 1240px;
+  height: 415px;
+  object-fit: cover;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 1240px;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow-left {
+  flex: 1;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.arrow-right {
+  justify-content: flex-end;
+  font-size: 40px;
+  padding: 10px;
+}
