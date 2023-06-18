@@ -1,3 +1,42 @@
+.collapse-menu-item .scrollingMenu {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-content {
+  width: 1045px;
+  max-width: 100%;
+  display: flex;
+  background-color: #F7F7F7;
+  padding: 20px;
+  color: #FF6060;
+  overflow: hidden;
+  border-radius:5px;
+}
+
+.scrollingMenu {
+  display: flex;
+  width: 1045px;
+  max-width: 100%;
+  align-items: center;
+  padding: 20px;
+  background: #FF6060;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: x-large;
+
+}
+
+.scrollingMenu .arrow {
+  margin-left: auto;
+  cursor: pointer;
+}
+
 .scroll-animation {
   animation: scroll 0.8s forwards;
 }
@@ -41,7 +80,7 @@
 }
 
 .collapse-animation {
-  animation: slideUp 0.8s forwards;
+  animation: slideUp 0.8s;
 }
 
 @keyframes slideUp {
@@ -50,6 +89,6 @@
   }
 
   100% {
-    transform: translateY(-30%);
+    transform: translateY(-5%);
   }
 }

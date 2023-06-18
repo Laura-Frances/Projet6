@@ -2,7 +2,9 @@
 import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import apartmentsData from '../Carrousel/jsonData.json';
+import Error from '../Error/Error';
 import '../Carrousel/Carrousel.scss';
+
 
 
 function ApartmentPage() {
@@ -11,8 +13,9 @@ function ApartmentPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!apartment) {
-    return <div>Appartement non trouvé</div>;
+    return <Error />
   }
+
   const totalImages = apartment.pictures.length;
 
   const handleNextImage = () => {
@@ -36,17 +39,23 @@ function ApartmentPage() {
           <div className="navigation">
             <div
               className="carousel-navigation arrow-left"
-              onClick={handlePrevImage}
-            >
+              onClick={handlePrevImage}>
               <i className="fas fa-chevron-left"></i>
             </div>
             <div
               className="carousel-navigation arrow-right"
-              onClick={handleNextImage}
-            >
+              onClick={handleNextImage}>
               <i className="fas fa-chevron-right"></i>
             </div>
           </div>
+
+          {apartment.pictures.length > 1 && (
+            <div className='numbering'>
+              <div className={`number ${currentImageIndex === 0 ? 'active' : ''}`}>
+                {`${currentImageIndex + 1}/${apartment.pictures.length}`}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -19,8 +19,8 @@ const MenuItem = ({ title, content }) => {
   };
 
   return (
-    <div>
-      <div className={`menu ${isOpen ? 'active' : ''}`}>
+    <div className='menu-collapse'>
+      <div className={`scrollingMenu ${isOpen ? 'active' : ''}`}>
         {title}
         <i
           className={`arrow fas ${isOpen ? (isClosing ? 'fa-chevron-up rotate-animation-reverse' : 'fa-chevron-up rotate-animation') : 'fa-chevron-down'}`}
@@ -33,6 +33,7 @@ const MenuItem = ({ title, content }) => {
         </div>
       )}
     </div>
+    
   );
 };
 

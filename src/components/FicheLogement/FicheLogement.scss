@@ -1,0 +1,63 @@
+.FicheLogement {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    color: #FF6060;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    margin: 30px 0px 0px 0px;
+}
+
+.location {
+    font-size: 18px;
+    margin: 10px 0px 20px 0px;
+}
+
+.tags {
+    margin-bottom: 15px;
+}
+
+.tags>span {
+    margin-right: 10px;
+    padding: 5px 25px 5px 25px;
+    background: #FF6060;
+    border-radius: 10px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.frames {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 320px;
+    margin-top: 40px;
+}
+
+.barre-description {
+    width: 500px;
+    max-width: 100%;
+}
+
+.barre-equipements {
+    width: 500px;
+    max-width: 100%;
+}
+
+.FicheLogement .scrollingMenu {
+    margin: 0;
+    width: 500px;
+}
+
+.eachEquipment {
+    display:block;
+}
+p.description {
+    margin:0;
+}
