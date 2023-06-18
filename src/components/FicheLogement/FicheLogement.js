@@ -22,13 +22,16 @@ function FicheLogement() {
       <Header />
       <Carrousel />
 
-      <div className='Titles'></div>
-      <h2 className='title'>{apartment.title}</h2>
-      <p className='location'>{apartment.location}</p>
-
-      <div className='Host'>
-
+      <div className='Titles-and-host'>
+        <div className='title-container'>
+          <h2 className='title'>{apartment.title}</h2>
+        </div>
+        <div className='Host'>
+          <div className='nameHost'>{apartment.host.name}</div>
+          <img className='pictureHost' src={apartment.host.picture} alt='Hôte' />
+        </div>
       </div>
+      <p className='location'>{apartment.location}</p>
 
       <div className='Rate'>
         <div className={apartment.rating}>
@@ -37,16 +40,17 @@ function FicheLogement() {
 
       <div className='tags'>{apartment.tags.map((tag, index) => (
         <span className='name-tag' key={index}>{tag}</span>
-      ))}</div>
-
-<div className='frames'>
-      <div className='barre-description'>
-        <MenuItem className='LogementMenu' title="Description" content={<p className='description'>{apartment.description}</p>} />
+      ))}
       </div>
 
-      <div className='barre-equipements'>
-      <MenuItem className='LogementMenu' title="Equipements" content={<p className='description'>
-        {apartment.equipments.map(equipment => <span className='eachEquipment'>{equipment}</span>)}</p>} />      
+      <div className='frames'>
+        <div className='barre-description'>
+          <MenuItem className='LogementMenu' title="Description" content={<p className='description'>{apartment.description}</p>} />
+        </div>
+
+        <div className='barre-equipements'>
+          <MenuItem className='LogementMenu' title="Equipements" content={<p className='description'>
+            {apartment.equipments.map((equipment, index) => <span className='eachEquipment' key={`equipment_${index}`}>{equipment}</span>)}</p>} />
         </div>
       </div>
 
