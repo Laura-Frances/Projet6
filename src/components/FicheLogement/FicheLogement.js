@@ -33,14 +33,18 @@ function FicheLogement() {
       </div>
       <p className='location'>{apartment.location}</p>
 
-      <div className='Rate'>
-        <div className={apartment.rating}>
+      <div className='Rate-and-tags'>
+        <div className='tags'>{apartment.tags.map((tag, index) => (
+          <span className='name-tag' key={index}>{tag}</span>
+        ))}
         </div>
-      </div>
 
-      <div className='tags'>{apartment.tags.map((tag, index) => (
-        <span className='name-tag' key={index}>{tag}</span>
-      ))}
+        <div className='Rate'>
+          {Array.from({ length: 5 }, (_, index) => (
+            <i key={index} className={`fas ${index < apartment.rating ? 'filled-star' : 'far empty-star'} fa-star`}></i>
+          ))}
+        </div>
+
       </div>
 
       <div className='frames'>

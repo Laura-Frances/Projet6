@@ -6,7 +6,6 @@
     margin: 0 auto;
     color: #FF6060;
 
-
     .title {
         font-weight: 500;
         font-size: 36px;
@@ -39,7 +38,6 @@
         margin-bottom: 50px;
         width: 1240px;
         max-width: 100%;
-
     }
 
     .barre-description {
@@ -51,7 +49,6 @@
     .barre-equipements {
         width: 500px;
         max-width: 100%;
-
     }
 
     .FicheLogement .scrollingMenu {
@@ -65,7 +62,6 @@
     p.description {
         margin: 0;
     }
-
 
 .Titles-and-host {
     display: flex;
@@ -91,3 +87,22 @@
     width: 95px;
 }
 }
+
+.Rate-and-tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .Rate {
+    font-size: 25px;
+  }
+
+.filled-star {
+    color: #FF6060;
+    margin-right: 15px;
+  }
+  .empty-star {
+    color: #E3E3E3;
+    margin-right: 15px;
+  }
