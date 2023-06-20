@@ -9,16 +9,25 @@
     .title {
         font-weight: 500;
         font-size: 36px;
-        margin: 30px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    @media (max-width: 1240px) {
+        margin: 0px;
     }
 
     .location {
         font-size: 18px;
-        margin: 10px 0px 20px 0px;
+        margin: 0px;
+        width: 50%;
     }
 
     .tags {
-        margin-bottom: 15px;
+        margin-top: 20px;
+
+        @media (max-width: 1240px) {
+            width: 600px;
+        }
     }
 
     .tags>span {
@@ -26,29 +35,44 @@
         padding: 5px 25px 5px 25px;
         background: #FF6060;
         border-radius: 10px;
-        font-weight: lighter;
         color: #FFFFFF;
         font-size: 15px;
+        width: 190px;
+        max-width: 100%;
+        flex-wrap: wrap;
+
+        @media (max-width: 600px) {
+            padding: 5px;
+        }
     }
 
     .frames {
         display: flex;
         align-items: flex-start;
-        margin-top: 50px;
+        margin-top: 25px;
         margin-bottom: 50px;
         width: 1240px;
         max-width: 100%;
+
+        @media (max-width: 1240px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .barre-description {
-        width: 500px;
-        max-width: 100%;
+        max-width: 500px;
         margin-right: 200px;
+
+        @media (max-width: 1240px) {
+            margin-bottom: 20px;
+            margin-right: 0px;
+            align-items: center;
+        }
     }
 
     .barre-equipements {
-        width: 500px;
-        max-width: 100%;
+        max-width: 500px;
     }
 
     .FicheLogement .scrollingMenu {
@@ -63,46 +87,71 @@
         margin: 0;
     }
 
-.Titles-and-host {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 30px;
+    .first-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .Host {
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+
+        @media (max-width: 1240px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .nameHost {
+        width: 90px;
+        font-size: 19px;
+        margin-top: 15px;
+
+        @media (max-width: 1240px) {
+            width: 100%;
+        }
+    }
+
+    .pictureHost {
+        border-radius: 90px;
+        width: 80px;
+
+        @media (max-width: 1240px) {
+            flex-wrap: wrap;
+        }
+    }
 }
 
-.Host {
+.details-tags {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    width: 160px;
+
+    @media (max-width: 1240px) {
+        flex-wrap: wrap;
+    }
 }
 
-.nameHost {
-    width: 90px;
-    font-size: 18px;
-}
-
-.pictureHost {
-    border-radius: 80px;
-    width: 95px;
-}
-}
-
-.Rate-and-tags {
+.Rate {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-  }
-
-  .Rate {
     font-size: 25px;
-  }
+    margin-top: 20px;
+
+    @media (max-width: 1240px) {
+        margin-top: 15px;
+    }
+}
 
 .filled-star {
     color: #FF6060;
-    margin-right: 15px;
-  }
-  .empty-star {
+    margin-right: 10px;
+}
+
+.empty-star {
     color: #E3E3E3;
     margin-right: 15px;
-  }
+}

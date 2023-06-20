@@ -22,30 +22,34 @@ function FicheLogement() {
       <Header />
       <Carrousel />
 
-      <div className='Titles-and-host'>
-        <div className='title-container'>
+      <div className='first-container'>
+
           <h2 className='title'>{apartment.title}</h2>
-        </div>
+   
+
         <div className='Host'>
           <div className='nameHost'>{apartment.host.name}</div>
           <img className='pictureHost' src={apartment.host.picture} alt='Hôte' />
         </div>
       </div>
       <p className='location'>{apartment.location}</p>
-
-      <div className='Rate-and-tags'>
-        <div className='tags'>{apartment.tags.map((tag, index) => (
-          <span className='name-tag' key={index}>{tag}</span>
-        ))}
-        </div>
-
-        <div className='Rate'>
-          {Array.from({ length: 5 }, (_, index) => (
-            <i key={index} className={`fas ${index < apartment.rating ? 'filled-star' : 'far empty-star'} fa-star`}></i>
+        <div className='details-tags'>
+          <div className='tags'>{apartment.tags.map((tag, index) => (
+            <span className='name-tag' key={index}>{tag}</span>
           ))}
-        </div>
+          </div>
+          <div className='Rate'>
+            {Array.from({ length: 5 }, (_, index) => (
+              <i key={index} className={`fas ${index < apartment.rating ? 'filled-star' : 'far empty-star'} fa-star`}></i>
+            ))}
+          </div>
 
-      </div>
+        </div>
+      
+
+
+
+
 
       <div className='frames'>
         <div className='barre-description'>

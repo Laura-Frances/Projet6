@@ -7,16 +7,25 @@
   height: 223px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 5px auto;
+  margin: 0px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: multiply;
 }
 
 .banner-title {
   position: absolute;
+  width: 450px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 40px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
+}
+@media (max-width: 1240px) {
+  .banner-title {
+    max-width: 100%;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=Banner.css.map */
