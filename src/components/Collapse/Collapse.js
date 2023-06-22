@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import MenuItem from '../Hooks/MenuItem';
+import MenuItem from '../MenuCollapse/MenuCollapse';
 import '../Collapse/Collapse.scss';
 
 const Collapse = () => {
-  const [openMenus, setOpenMenus] = useState([]);
+  const [openMenus, setOpenMenus] = useState([]); // on définie la valeur de openMenus comme un tableau vide
 
-  const handleItemClick = (index) => {
-    if (openMenus.includes(index)) {
-      setOpenMenus(openMenus.filter((item) => item !== index));
+  const handleItemClick = (index) => { // gère les clics sur les éléments de menus
+    if (openMenus.includes(index)) { // vérifie si index est présent dans le tableau openMenus
+      setOpenMenus(openMenus.filter((item) => item !== index)); //met à jour l'état openMenus, filtre le tableau openMenus, exclue l'élément avec l'indice index
     } else {
-      setOpenMenus([...openMenus, index]);
+      setOpenMenus([...openMenus, index]); // met à jour l'état openMenus en créant un nouveau tableau
     }
   };
 

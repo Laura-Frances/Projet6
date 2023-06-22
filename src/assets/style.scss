@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+$primary-color: #FF6060;
+$font-stack: 'Montserrat';
 body {
-  font-family: 'Montserrat';
+  
+  font: 100% $font-stack;
+  color: $primary-color;
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;

@@ -1,28 +1,25 @@
 
 import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
-import apartmentsData from '../Carrousel/jsonData.json';
+import apartmentData from '../Data/jsonData.json';
 import Error from '../Error/Error';
 import '../Carrousel/Carrousel.scss';
 
-
-
-function ApartmentPage() {
-  const { id } = useParams();
-  const apartment = apartmentsData.find((apartment) => apartment.id === id);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+function Carrousel() {
+  const { id } = useParams(); // on extrait la valeur de l'URL correspondant au paramètre id
+  const apartment = apartmentData.find((apartment) => apartment.id === id); // on recherche l'appartement correspondant à l'ID extrait de l'URL avec 'find'
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // état initialisé à 0
 
   if (!apartment) {
-    return <Error />
+    return <Error /> // page d'erreur 404 renvoyée
   }
 
-  const totalImages = apartment.pictures.length;
-
-  const handleNextImage = () => {
+  const totalImages = apartment.pictures.length; // calcule le nombre d'img pour l'appartement
+  const handleNextImage = () => { // fonction est appelée lors du clic sur la flèche suivante
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
   };
 
-  const handlePrevImage = () => {
+  const handlePrevImage = () => { // fonction est appelée lors du clic sur la flèche précédente
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? totalImages - 1 : prevIndex - 1
     );
@@ -62,4 +59,4 @@ function ApartmentPage() {
   );
 }
 
-export default ApartmentPage;;
+export default Carrousel;;

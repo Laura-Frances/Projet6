@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Cards/cards';
-import apartment from '../Gallery/cardsData.json'
-import '../Gallery/gallery.scss'
+import apartment from '../Data/jsonData.json';
+import '../Gallery/gallery.scss';
 
 function Gallery() {
   return (

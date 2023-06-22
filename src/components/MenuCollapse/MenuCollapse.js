@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import '../Hooks/MenuItem.scss';
+import './MenuCollapse.scss';
 
-const MenuItem = ({ title, content }) => {
+const MenuCollapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
   const handleItemClick = () => {
     if (isOpen) {
       setIsClosing(true);
-      setTimeout(() => {
-        setIsOpen(false);
-        setIsClosing(false);
-      }, 300);
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          setIsOpen(false);
+          setIsClosing(false);
+        }, 200);
+      });
     } else {
       setIsOpen(true);
       setIsClosing(false);
@@ -27,14 +29,15 @@ const MenuItem = ({ title, content }) => {
           onClick={handleItemClick}
         />
       </div>
+      
       {isOpen && (
         <div className={`menu-content ${isClosing ? 'collapse-animation' : 'scroll-animation'}`}>
           {content}
         </div>
       )}
     </div>
-    
   );
+  
 };
 
-export default MenuItem;
+export default MenuCollapse;

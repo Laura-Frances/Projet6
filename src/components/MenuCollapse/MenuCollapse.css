@@ -1,13 +1,14 @@
 .menu-collapse {
   width: 1025px;
   max-width: 100%;
-  @media (max-width: 1240px) {
-   width: 300px;
 }
+@media (max-width: 1240px) {
+  .menu-collapse {
+    width: 300px;
+  }
 }
 
 .collapse-menu-item .scrollingMenu {
-
   position: relative;
   display: flex;
   max-width: 100%;
@@ -21,9 +22,8 @@
   display: flex;
   background-color: #F7F7F7;
   padding: 20px;
-  color: #FF6060;
   overflow: hidden;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .scrollingMenu {
@@ -49,12 +49,10 @@
   0% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(3px);
   }
 }
-
 .rotate-animation {
   animation: rotate 0.8s forwards;
 }
@@ -63,12 +61,10 @@
   0% {
     transform: rotate(180deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 .rotate-animation-reverse {
   animation: rotate-reverse 0.8s forwards;
 }
@@ -77,12 +73,10 @@
   0% {
     transform: rotate(360deg);
   }
-
   100% {
     transform: rotate(180deg);
   }
 }
-
 .collapse-animation {
   animation: slideUp 0.8s;
 }
@@ -91,8 +85,7 @@
   0% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(-5%);
   }
-}
+}/*# sourceMappingURL=MenuItem.css.map */

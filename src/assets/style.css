@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 body {
-  font-family: "Montserrat";
+  font: 100% "Montserrat";
+  color: #FF6060;
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
   font-weight: lighter;
-}/*# sourceMappingURL=style.css.map */
+}

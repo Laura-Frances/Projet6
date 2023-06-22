@@ -1,10 +1,10 @@
 import React from 'react';
-import '../Cards/cards.scss'
+import '../Cards/cards.scss';
 import { Link } from 'react-router-dom';
 
 
 function Card(props) {
-  const { id, title, cover } = props;
+  const { id, title, cover } = props; // on extrait les valeurs spécifiques des props
 
   return (
     <Link key={id} to={`/apartment/${id}`} className="card">

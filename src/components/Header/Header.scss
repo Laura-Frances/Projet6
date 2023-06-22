@@ -5,16 +5,20 @@
   justify-content: space-between;
   margin: 20px auto;
 
-  @media (max-width: 370px) {
+  @media (max-width: 380px) {
     font-size: 20px;
     flex-wrap: wrap;
+
   }
 }
 
 .header-nav {
   max-width: 100%;
-  padding: 0px;
+  padding: 8px;
   gap: 40px;
+  @media (max-width: 380px) {
+    gap: 10px;
+  }
 }
 
 .header nav ul {
@@ -29,6 +33,9 @@
 
 .header-nav ul li {
   margin-right: 30px;
+}
+.header-nav li a.active {
+  text-decoration: underline;
 }
 
 .header nav ul li a {
@@ -47,5 +54,3 @@
     margin-right: 20px;
   }
 }
-
-.header-nav li {}
