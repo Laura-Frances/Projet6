@@ -2,11 +2,12 @@
 
 $primary-color: #FF6060;
 $font-stack: 'Montserrat';
+
 body {
-  
   font: 100% $font-stack;
   color: $primary-color;
   max-width: 1240px;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
   font-weight: lighter;

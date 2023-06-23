@@ -1,6 +1,6 @@
-import './App.scss';
-import Router from './Router/Router'
 import 'normalize.css';
+import Router from './Router/Router'
+
 
 function App() {
   return (

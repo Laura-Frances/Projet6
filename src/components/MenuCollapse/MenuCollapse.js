@@ -29,7 +29,6 @@ const MenuCollapse = ({ title, content }) => {
           onClick={handleItemClick}
         />
       </div>
-      
       {isOpen && (
         <div className={`menu-content ${isClosing ? 'collapse-animation' : 'scroll-animation'}`}>
           {content}

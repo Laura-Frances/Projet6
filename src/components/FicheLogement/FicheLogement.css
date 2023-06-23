@@ -3,6 +3,7 @@
   position: relative;
   max-width: 1440px;
   width: 100%;
+  max-height: 100%;
   color: #FF6060;
 }
 .FicheLogement .titles {
@@ -24,11 +25,6 @@
 }
 .FicheLogement .tags {
   margin-top: 20px;
-}
-@media (max-width: 1240px) {
-  .FicheLogement .tags {
-    width: 600px;
-  }
 }
 .FicheLogement .tags > span {
   margin-right: 10px;
