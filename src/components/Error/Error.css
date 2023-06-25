@@ -7,23 +7,34 @@
   height: 65vh;
   color: #FF6060;
 }
-
-h1 {
+.error-page h1 {
   font-size: 48px;
   text-align: center;
   font-weight: 700;
   font-size: 288px;
   margin: 0;
 }
-
-.txt-error {
+.error-page .txt-error {
   text-align: center;
   font-weight: 500;
   font-size: 36px;
 }
-
-.home-link {
+.error-page .home-link {
   text-decoration: underline;
   color: #FF6060;
   font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .error-page {
+    height: 100vh;
+  }
+  .error-page h1 {
+    font-size: 80px;
+  }
+  .error-page .txt-error {
+    font-size: 24px;
+  }
+  .error-page .home-link {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=Error.css.map */
