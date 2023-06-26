@@ -8,7 +8,7 @@ import '../Carrousel/Carrousel.scss';
 function Carrousel() {
   const { id } = useParams(); // on extrait la valeur de l'URL correspondant au paramètre id
   const apartment = apartmentData.find((apartment) => apartment.id === id); // on recherche l'appartement correspondant à l'ID extrait de l'URL avec 'find'
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // état initialisé à 0
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // état initialisé à 0 // setCurrentImageIndex met à jour la valeur de currentImageIndex
 
   if (!apartment) {
     return <Error /> // page d'erreur 404 renvoyée
@@ -16,12 +16,12 @@ function Carrousel() {
 
   const totalImages = apartment.pictures.length; // calcule le nombre d'img pour l'appartement
   const handleNextImage = () => { // fonction est appelée lors du clic sur la flèche suivante
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
+    setCurrentImageIndex((index) => (index + 1) % totalImages);
   };
 
   const handlePrevImage = () => { // fonction est appelée lors du clic sur la flèche précédente
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? totalImages - 1 : prevIndex - 1
+    setCurrentImageIndex((index) =>
+      index === 0 ? totalImages - 1 : index - 1
     );
   };
   return (
@@ -35,14 +35,14 @@ function Carrousel() {
           />
           <div className="navigation">
             <div
-              className="carousel-navigation arrow-left"
-              onClick={handlePrevImage}>
-              <i className="fas fa-chevron-left"></i>
+              className="carousel-navigation arrow-left">
+              <i className="fas fa-chevron-left"
+               onClick={handlePrevImage}></i>
             </div>
             <div
-              className="carousel-navigation arrow-right"
-              onClick={handleNextImage}>
-              <i className="fas fa-chevron-right"></i>
+              className="carousel-navigation arrow-right">
+              <i className="fas fa-chevron-right"
+              onClick={handleNextImage}></i>
             </div>
           </div>
 

@@ -6,9 +6,9 @@ import '../Gallery/gallery.scss';
 function Gallery() {
   return (
     <div className="gallery">
-      {apartment.map((apartment) => (
-        <Card
-          key={apartment.id}
+      {apartment.map((apartment) => ( // parcourt chaque élément du tableau apartment
+        <Card // composant 'card' rendu pour chaque élément du tableau
+          key={apartment.id} // extraction des valeurs de l'objet apartment dans le tableau
           id={apartment.id}
           title={apartment.title}
           cover={apartment.cover}
