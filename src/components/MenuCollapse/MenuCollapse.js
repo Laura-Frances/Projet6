@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './MenuCollapse.scss';
 
 const MenuCollapse = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // variable d'état isOpen initialisée à false
+  const [isClosing, setIsClosing] = useState(false); // variable d'état isClosing initialisée à false
 
   const handleItemClick = () => {
     if (isOpen) {
