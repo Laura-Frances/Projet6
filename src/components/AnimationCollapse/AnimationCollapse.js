@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './MenuCollapse.scss';
+import './AnimationCollapse.scss';
 
-const MenuCollapse = ({ title, content }) => {
+const AnimationCollapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false); // variable d'état isOpen initialisée à false
   const [isClosing, setIsClosing] = useState(false); // variable d'état isClosing initialisée à false
 
@@ -39,4 +39,4 @@ const MenuCollapse = ({ title, content }) => {
   
 };
 
-export default MenuCollapse;
+export default AnimationCollapse;

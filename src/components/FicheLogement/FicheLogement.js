@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Carrousel from '../Carrousel/Carrousel';
 import Error from '../Error/Error';
-import MenuItem from '../MenuCollapse/MenuCollapse';
+import MenuItem from '../AnimationCollapse/AnimationCollapse';
 import '../FicheLogement/FicheLogement.scss';
 
 function FicheLogement() { // declaration du composant

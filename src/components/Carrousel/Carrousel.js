@@ -24,6 +24,7 @@ function Carrousel() {
       index === 0 ? totalImages - 1 : index - 1 // décrémentation -1
     );
   };
+
   return (
     <div>
       <div className="carrousel">
@@ -35,20 +36,20 @@ function Carrousel() {
           />
           <div className="navigation">
             <div
-              className="carrousel-navigation arrow-left">
-              <i className="fas fa-chevron-left"
-               onClick={handlePrevImage}></i>
+              className="carrousel-navigation arrow-left"> 
+              <i className="fas fa-chevron-left" // déclenchement des fonctions de clic pour l'img précédente:
+               onClick={handlePrevImage}></i> 
             </div>
             <div
               className="carrousel-navigation arrow-right">
-              <i className="fas fa-chevron-right"
-              onClick={handleNextImage}></i>
+              <i className="fas fa-chevron-right" // déclenchement des fonctions de clic pour l'img suivante:
+              onClick={handleNextImage}></i> 
             </div>
           </div>
 
-          {apartment.pictures.length > 1 && ( // condition qui vérifie s'il y a >1 image dans l'appartement, si oui on affiche le numbering
-            <div className='numbering'>
-              <div className={`number ${currentImageIndex === 0 ? 'active' : ''}`}>
+          {apartment.pictures.length > 1 && ( // s'il y a +1 image dans l'appartement, on lit la suite du code ... on affiche +1 à l'image actuelle si l'index est à 0
+            <div className='numbering'> 
+              <div className={`number ${currentImageIndex === 0 ? '' : ''}`}> 
                 {`${currentImageIndex + 1}/${apartment.pictures.length}`}
               </div>
             </div>
