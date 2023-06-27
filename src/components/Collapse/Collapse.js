@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import AnimationCollapse from '../AnimationCollapse/AnimationCollapse';
 import '../Collapse/Collapse.scss';
 
