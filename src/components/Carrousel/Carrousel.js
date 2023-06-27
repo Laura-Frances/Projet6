@@ -36,20 +36,20 @@ function Carrousel() {
           />
           <div className="navigation">
             <div
-              className="carrousel-navigation arrow-left"> 
+              className="carrousel-navigation arrow-left">
               <i className="fas fa-chevron-left" // déclenchement des fonctions de clic pour l'img précédente:
-               onClick={handlePrevImage}></i> 
+                onClick={handlePrevImage}></i>
             </div>
             <div
               className="carrousel-navigation arrow-right">
               <i className="fas fa-chevron-right" // déclenchement des fonctions de clic pour l'img suivante:
-              onClick={handleNextImage}></i> 
+                onClick={handleNextImage}></i>
             </div>
           </div>
 
-          {apartment.pictures.length > 1 && ( // s'il y a +1 image dans l'appartement, on lit la suite du code ... on affiche +1 à l'image actuelle si l'index est à 0
-            <div className='numbering'> 
-              <div className={`number ${currentImageIndex === 0 ? '' : ''}`}> 
+          {apartment.pictures.length > 1 && ( // s'il y a +1 image dans l'appartement, on lit la suite du code ... 
+            <div className='numbering'>
+              <div className="number">
                 {`${currentImageIndex + 1}/${apartment.pictures.length}`}
               </div>
             </div>
@@ -60,4 +60,4 @@ function Carrousel() {
   );
 }
 
-export default Carrousel;;
+export default Carrousel;
