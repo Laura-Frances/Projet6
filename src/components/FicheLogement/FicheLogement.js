@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Carrousel from '../Carrousel/Carrousel';
 import Error from '../Error/Error';
-import MenuItem from '../AnimationCollapse/AnimationCollapse';
+import AnimationCollapse from '../AnimationCollapse/AnimationCollapse';
 import '../FicheLogement/FicheLogement.scss';
 
 function FicheLogement() { // declaration du composant
@@ -48,11 +48,11 @@ function FicheLogement() { // declaration du composant
       
       <div className='frames'>
         <div className='barre-description'>
-          <MenuItem className='LogementMenu' title="Description" content={<p className='description'>{apartment.description}</p>} /> 
+          <AnimationCollapse className='LogementMenu' title="Description" content={<p className='description'>{apartment.description}</p>} /> 
         </div>
 
         <div className='barre-equipements'>
-          <MenuItem className='LogementMenu' title="Equipements" content={<p className='description'>
+          <AnimationCollapse className='LogementMenu' title="Equipements" content={<p className='description'>
             {apartment.equipments.map((equipment, index) => <span className='eachEquipment' key={`equipment_${index}`}>{equipment}</span>)}</p>} />
         </div>
       </div>

@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
-import MenuItem from '../AnimationCollapse/AnimationCollapse';
+import AnimationCollapse from '../AnimationCollapse/AnimationCollapse';
 import '../Collapse/Collapse.scss';
 
 const Collapse = () => {
-  const [openMenus, setOpenMenus] = useState([]); // on définie l'état de openMenus comme un tableau vide
-
-  const handleItemClick = (index) => { // gère les clics sur les éléments de menus
-    if (openMenus.includes(index)) { // vérifie si index est présent dans le tableau openMenus
-      setOpenMenus(openMenus.filter((item) => item !== index)); //met à jour l'état openMenus, filtre le tableau openMenus, exclue l'élément avec l'indice index
-    } else {
-      setOpenMenus([...openMenus, index]); // met à jour l'état openMenus en créant un nouveau tableau
-    }
-  };
-
   const menuItems = [
     {
       title: 'Fiabilité',
@@ -38,15 +28,13 @@ const Collapse = () => {
 
   return (
     <div className="collapse">
-      {menuItems.map((menuItem) => ( // itère sur le tableau menuItems, et pour chaque élément rend MenuItem avec ses props :
-        <MenuItem
+      {menuItems.map((menuItem) => ( // itère sur le tableau menuItems, et pour chaque élément rend AnimationCollapse avec ses props :
+        <AnimationCollapse
           key={menuItem.index}
           className="collapse-menu-item"
           title={menuItem.title}
           content={menuItem.content}
           index={menuItem.index}
-          openMenus={openMenus}
-          handleItemClick={handleItemClick}
         />
       ))}
     </div>
